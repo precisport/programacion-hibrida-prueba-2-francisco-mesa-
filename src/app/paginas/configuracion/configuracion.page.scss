@@ -1,0 +1,26 @@
+ion-content {
+    padding: 1em;
+    background-color: #fffcfc; /* Fondo blanco para la página */
+  }
+  
+  .configuracion-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    background-color: #fff5f5; /* Fondo blanco para el contenedor */
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    border-radius: 8px;
+  }
+  
+  ion-item {
+    background-color: #e7e7e7; /* Fondo blanco para el ítem */
+  }
+  
+  ion-item ion-label {
+    color: rgb(241, 232, 232); /* Texto en negro */
+  }
+  
+  ion-fab {
+    margin: 1em;
+  }
+  

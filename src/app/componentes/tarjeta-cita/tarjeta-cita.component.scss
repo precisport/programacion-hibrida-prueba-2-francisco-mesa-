@@ -1,0 +1,20 @@
+.tarjeta-cita {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    background-color: #f9f9f9;
+  
+    .frase {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+  
+    .autor {
+      text-align: right;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  

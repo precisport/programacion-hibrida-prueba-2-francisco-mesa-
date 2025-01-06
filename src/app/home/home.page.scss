@@ -1,0 +1,48 @@
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  background-color: #ffffff; /* Fondo blanco para la página */
+}
+
+.cita-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  background-color: #000000fd;  /* Caja de citas blanca */
+  box-shadow: 0 4px 8px rgb(73, 65, 65);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frase {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: rgb(3, 3, 3); /* Texto en negro */
+}
+
+.autor {
+  font-size: 1.2em;
+  color: rgb(0, 0, 0); /* Texto en negro */
+}
+
+ion-fab {
+  margin: 1em;
+}
+
+ion-icon {
+  color: rgb(231, 225, 225); /* Ícono blanco */
+}
+
+ion-button[color="danger"] {
+  --background: rgb(100, 0, 0); /* Fondo rojo */
+  --color: rgb(0, 0, 0); /* Ícono blanco */
+  --border-radius: 50%; /* Botón circular */
+  --padding: 0.75em; /* Ajuste de padding */
+}

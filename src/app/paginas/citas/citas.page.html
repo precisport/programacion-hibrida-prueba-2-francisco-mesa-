@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/" color="light">
+        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: rgb(255, 254, 254);">Gestión de Citas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #ffffff;">
+  <form #citaForm="ngForm" (ngSubmit)="agregarCita(citaForm)">
+    <div class="formulario-container" style="background-color: #ffffff;">
+      <ion-item style="--background: #ffffff; margin-bottom: 1em;">
+        <ion-label position="floating" style="color: black;">Cita</ion-label>
+        <ion-input type="text" name="frase" ngModel required #frase="ngModel" style="color: black; padding: 10px;"></ion-input>
+      </ion-item>
+      <div *ngIf="frase.invalid && (frase.dirty || frase.touched)" class="error-message">
+        <ion-text color="danger">La cita es requerida.</ion-text>
+      </div>
+
+      <ion-item style="--background: #ffffff; margin-bottom: 1em;">
+        <ion-label position="floating" style="color: black;">Autor</ion-label>
+        <ion-input type="text" name="autor" ngModel required #autor="ngModel" style="color: rgb(0, 0, 0); padding: 10px;"></ion-input>
+      </ion-item>
+      <div *ngIf="autor.invalid && (autor.dirty || autor.touched)" class="error-message">
+        <ion-text color="danger">El autor es requerido.</ion-text>
+      </div>
+
+      <ion-button type="submit" [disabled]="!citaForm.form.valid" expand="block">Agregar</ion-button>
+    </div>
+  </form>
+
+  <div class="lista-container" style="background-color: #ffffff;">
+    <ion-list>
+      <ion-item *ngFor="let cita of citas">
+        <ion-label>
+          <h2 style="color: white;">{{ cita.frase }}</h2>
+          <p style="color: white;">- {{ cita.autor }}</p>
+        </ion-label>
+        <ion-button slot="end" color="primary" (click)="borrarCita(cita.id)">
+          <ion-icon name="trash-bin-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

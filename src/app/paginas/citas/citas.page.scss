@@ -1,0 +1,55 @@
+ion-content {
+  padding: 1em;
+  background-color: #ffffff; /* Fondo blanco para la página */
+}
+
+.formulario-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  background-color: #ffffff; /* Fondo blanco para el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+.lista-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  background-color: #ffffff; /* Fondo blanco para el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+ion-item {
+  background-color: #ffffff; /* Fondo blanco para el ítem */
+}
+
+ion-item ion-label {
+  color: black; /* Texto en negro */
+}
+
+h2 {
+  color: white; /* Texto en blanco */
+}
+
+p {
+  color: white; /* Texto en blanco */
+}
+
+ion-input {
+  color: black; /* Texto en negro para el campo de entrada */
+  padding: 10px; /* Añadir padding interno */
+}
+
+.error-message {
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 16px; /* Alinear con el ítem */
+}
+
+/* Estilo para la flecha de retroceso */
+ion-toolbar ion-buttons ion-button ion-icon {
+  color: rgb(224, 214, 214); /* Color de la flecha en blanco */
+}

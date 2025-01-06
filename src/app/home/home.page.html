@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color: #ffecec;">Citas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/configuracion']">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #ffeeee;">
+  <div class="cita-container" *ngIf="citaAleatoria" style="background-color: #ffffff;">
+    <div class="tarjeta-cita">
+      <p class="frase" style="color: rgb(0, 0, 0);">{{ citaAleatoria.frase }}</p>
+      <p class="autor" style="color: black;">- {{ citaAleatoria.autor }}</p>
+      <ion-button *ngIf="permitirEliminar" color="danger" (click)="eliminarCita()">
+        <ion-icon name="trash-bin-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+  <p *ngIf="!citaAleatoria" style="color: rgb(0, 0, 0); text-align: center;">No hay más citas disponibles.</p>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/citas">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

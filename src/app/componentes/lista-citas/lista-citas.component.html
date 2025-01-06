@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item *ngFor="let cita of citas; let i = index">
+    <ion-label>
+      <h2>{{ cita.frase }}</h2>
+      <p>- {{ cita.autor }}</p>
+    </ion-label>
+    <ion-button slot="end" color="danger" (click)="eliminarCita(i)">Borrar</ion-button>
+  </ion-item>
+</ion-list>
